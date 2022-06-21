@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jam & Tanggal</title>
+        <style>
+                body {
+                        background-image: url("");
+                        background-position: center;
+                }
+                body p {
+                        color: #000;
+                        font-size: 32px;
+                        font-family: sans-serif;
+                        text-align: center;
+                }
+                .kotak {
+                        width: 250px;
+                        height: 50px;
+                        background-color: #0051ffa2;
+                        margin: 10px auto;
+                        overflow: hidden;
+                        border-radius: 20px;
+                        border: 2px solid #000;
+                        font-family: sans-serif;
+                        font-size: 42px;
+                        text-align: center;
+                        color: #fff;
+                }
+                .kalender {
+                        width: 250px;
+                        height: 50px;
+                        background-color: #0051ffa2;
+                        margin: 10px auto;
+                        overflow: hidden;
+                        border-radius: 20px;
+                        border: 2px solid #000;
+                        font-family: sans-serif;
+                        font-size: 42px;
+                        text-align: center;
+                        color: #fff;
+                }
+        </style>
+</head>
+<body>
+        <p><b>Tutorial jam digital dan tanggal</b></p>
+        <div class="kotak">
+                <div id="clock"></div>
+                <script>
+                        setInterval(() => {
+                                let date = new Date();
+                                let clock = document.getElementById('clock');
+                                clock.innerHTML = 
+                                        date.getHours() + ":" +
+                                        date.getMinutes() + ":" +
+                                        date.getSeconds();
+                        }, 1000);
+                </script>
+        </div>
+        <div class="kalender">
+                <div id="tanggal"></div>
+                <script>
+                        setInterval(() => {
+                                let date = new Date();
+                                let tanggal = document.getElementById('tanggal');
+                                tanggal.innerHTML = 
+                                        date.getDate() + "-" +
+                                        date.getMonth() + "-" +
+                                        date.getFullYear();
+                        }, 1000);
+                </script>
+        </div>
+</body>
+</html>
